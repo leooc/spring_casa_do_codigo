@@ -3,11 +3,19 @@
 <!-- Import da taglib -->
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="security" %>
 <!DOCTYPE html">
 <html>
 <head>
 <meta charset="UTF-8">
-
+	<ul class="nav navbar-nav navbar-right">
+	  <li>
+	    <a href="#">
+	        <security:authentication property="principal" var="usuario"/>
+	        Usuário: ${usuario.username}
+	    </a>
+	  </li>
+	</ul>
 	<c:url value="/resources/css" var="cssPath" />
 	<link rel="stylesheet" href="${cssPath }/bootstrap.min.css" >
 	<link rel="stylesheet" href="${cssPath }/bootstrap-theme.min.css">
