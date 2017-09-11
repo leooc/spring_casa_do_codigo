@@ -11,6 +11,8 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import br.com.casadocodigo.loja.daos.UsuarioDAO;
 
+
+@SuppressWarnings("deprecation")
 @EnableWebMvcSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	

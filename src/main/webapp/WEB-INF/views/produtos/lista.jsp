@@ -7,15 +7,11 @@
 <!DOCTYPE html">
 <html>
 <head>
-<meta charset="UTF-8">
-	<ul class="nav navbar-nav navbar-right">
-	  <li>
-	    <a href="#">
-	        <security:authentication property="principal" var="usuario"/>
-	        Usuário: ${usuario.username}
-	    </a>
-	  </li>
-	</ul>
+	 <c:url value="/resources/css" var="cssPath" />
+    <link rel="stylesheet" href="${cssPath}/bootstrap.min.css" />
+    <link rel="stylesheet" href="${cssPath}/bootstrap-theme.min.css" />
+    <style type="text/css">
+	<meta charset="UTF-8">
 	<c:url value="/resources/css" var="cssPath" />
 	<link rel="stylesheet" href="${cssPath }/bootstrap.min.css" >
 	<link rel="stylesheet" href="${cssPath }/bootstrap-theme.min.css">
@@ -25,8 +21,8 @@
 		}
 	</style>
 
-<title>Livors de java, Android, Iphone, Ruby, PHP e muito mais -
-	Casa do Código</title>
+	<title>Livors de java, Android, Iphone, Ruby, PHP e muito mais -
+		Casa do Código</title>
 </head>
 <body>
 	<nav class="navbar navbar-inverse">
@@ -46,6 +42,16 @@
 				<ul class="nav navbar-nav">
 					<li><a href="${s:mvcUrl('PC#listar').build() }">Lista de Produtos</a></li>
 					<li><a href="${s:mvcUrl('PC#form').build() }">Cadastro de Produtos</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+				  <li>
+				    <a href="#">
+				    	<security:authorize access="isAuthenticated()">
+					        <security:authentication property="principal" var="usuario"/>
+					        	Usuário: ${usuario.username }
+				        </security:authorize>
+				    </a>
+				  </li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->

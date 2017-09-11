@@ -25,11 +25,13 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>4.1.0.RELEASE</version>
+			<version>4.3.10.RELEASE</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-servlet-api</artifactId>
@@ -107,7 +109,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
-			<version>4.1.0.RELEASE</version>
+			<version>4.3.10.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
@@ -144,36 +146,37 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
-			<version>4.1.0.RELEASE</version>
+			<version>4.3.10.RELEASE</version>
 		</dependency>
+
 
 		<!-- Spring Security -->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-config</artifactId>
-			<version>4.0.0.M2</version>
+			<version>4.2.3.RELEASE</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-taglibs</artifactId>
-			<version>4.0.0.M2</version>
+			<version>4.2.3.RELEASE</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-web</artifactId>
-			<version>4.1.1.RELEASE</version>
+			<version>4.2.3.RELEASE</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-core</artifactId>
-			<version>4.0.0.M2</version>
+			<version>4.2.3.RELEASE</version>
 		</dependency>
 
 	</dependencies>
-	<repositories>
+	<!-- <repositories>
 		<repository>
 			<id>spring-milestones</id>
 			<name>Spring Milestones</name>
@@ -182,5 +185,5 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
-	</repositories>
+	</repositories> -->
 </project>
