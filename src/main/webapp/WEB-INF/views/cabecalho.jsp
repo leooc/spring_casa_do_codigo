@@ -66,7 +66,7 @@
 						</li>
 						
 						<li>
-						    <a href="?locale=en_UR" rel="nofollow">
+						    <a href="?locale=en_US" rel="nofollow">
 						        <fmt:message key="menu.en"/>
 						    </a>
 						</li>

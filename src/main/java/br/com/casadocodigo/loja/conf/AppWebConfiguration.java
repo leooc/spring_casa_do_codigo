@@ -2,6 +2,7 @@ package br.com.casadocodigo.loja.conf;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 import org.springframework.cache.CacheManager;
@@ -119,12 +120,15 @@ public class AppWebConfiguration extends WebMvcConfigurerAdapter {
 		configurer.enable();
 	}
 	
+	
+	
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(new LocaleChangeInterceptor());
 
 	}
 
+	
 	@Bean
 	public LocaleResolver localeResolver(){
 	    return new CookieLocaleResolver();
